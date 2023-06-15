@@ -29,7 +29,7 @@
 
 ## Konfiguration
 
-### Container Name
+### Container
 
 - con-mongodb
 - con-mongo-express
