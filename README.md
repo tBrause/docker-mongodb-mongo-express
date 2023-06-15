@@ -34,15 +34,35 @@
 - con-mongodb
 - con-mongo-express
 
-**Restart**
+### Volumes
+
+- ./data:/data/db
+
+### Environment
+
+#### MongoDB
+
+- MONGO_INITDB_ROOT_USERNAME=admin
+- MONGO_INITDB_DATABASE=auth
+- MONGO_INITDB_ROOT_PASSWORD=pass
+
+#### Mongo-Express
+
+- ME_CONFIG_MONGODB_SERVER=mongo-dev
+- ME_CONFIG_MONGODB_ADMINUSERNAME=admin
+- ME_CONFIG_MONGODB_ADMINPASSWORD=pass
+- ME_CONFIG_BASICAUTH_USERNAME=admin
+- ME_CONFIG_BASICAUTH_PASSWORD=tribes
+
+### Restart
 
 - always
 
-**PORTS**
+### PORTS
 
 - 27017 (MongoDB)
 - 8081 (Mongo-Express)
 
-**Networks**
+### Networks
 
 - net-mongodb (driver: bridge)
